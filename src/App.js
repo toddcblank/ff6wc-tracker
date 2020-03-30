@@ -4,7 +4,7 @@ import './App.css';
 import './tracker.css';
 import TrackerItemGrouping from './components/trackerItemGrouping'
 import trackerJson from './checks'
-
+import CountingTrackerItem from './components/countingTrackerItem';
 
 
 function App() {
@@ -19,7 +19,12 @@ function App() {
           groupIcon={group.groupIcon}
           groupedItems={group.groupedItems}
         />  
-         )}       
+         )
+         }
+         <CountingTrackerItem 
+          itemIcon="./icons/magicite.gif"
+          itemName="Espers Collected"
+         />       
        </div>
       </header>
     </div>

@@ -7,6 +7,36 @@
     width: 32px;
   }
 
+.item.incrementing {
+  grid-template-columns: 1fr;
+  height: 40px;
+  width: 94px;
+}
+
+.incrementor div {
+
+}
+
+.magicite {
+  background-image: url(./icons/magicite.gif);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  font: outline;
+  color: white;
+  font-weight: 600;
+  font-size:16px;
+  text-align: end;
+  padding-top: 20px;
+}
+
+.incrementor {
+
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 94px;
+}
+
 .groups {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
