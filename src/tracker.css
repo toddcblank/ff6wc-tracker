@@ -1,0 +1,58 @@
+.item {
+    margin: 2px;
+    display: inline-grid;
+    align-self: auto;
+    font-size: 0;
+    height: 48px;
+    width: 32px;
+  }
+
+.groups {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+}
+
+  .tracker-group {
+    border-style: solid;
+    border-color: crimson;
+    border-width: 1px;
+}
+  .tracker-group-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      border-style: solid;
+      border-width: 1px;
+  }
+
+  .group-item {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+    
+  .item-image {  
+    opacity: .25;
+    font-size: 0;
+    height: 100%;
+    max-width: 100%;    
+    min-width: 24px;
+  }
+
+  .collected {
+    opacity: 1;
+  }
+
+  .trackers {
+    background-color: black;
+    font-size: 0;
+  } 
+ 
+
+  .hidden {
+    display: none
+  }
+
+  a {
+    color: white
+  }
