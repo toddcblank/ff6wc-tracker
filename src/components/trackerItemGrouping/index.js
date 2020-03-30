@@ -5,6 +5,9 @@ class TrackerItemGrouping extends React.Component {
 
     constructor(props) {
         super(props);
+
+       
+
         this.state = {
             groupIcon: props.groupIcon,
             groupedItems: props.groupedItems
@@ -22,6 +25,7 @@ class TrackerItemGrouping extends React.Component {
                         itemName={this.state.groupIcon.itemName}
                         itemClickStates={this.state.groupIcon.itemClickStates}
                         itemCurrentClickState={0}
+                        itemAvailability={this.state.groupIcon.itemAvailability}
                     />
                     <div></div>
                 </div>
@@ -33,6 +37,7 @@ class TrackerItemGrouping extends React.Component {
                                 itemName={item.itemName}
                                 itemClickStates={item.itemClickStates}
                                 itemCurrentClickState={0}
+                                itemAvailability={item.itemAvailability}
                             />
                         )}
                 </div>

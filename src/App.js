@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h2>Final Fantasy 6: Worlds Collide Tracker</h2>
         <div className="groups">
        {
          trackerJson.map((group, i) => 

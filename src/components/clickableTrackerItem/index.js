@@ -3,14 +3,22 @@ import React from 'react'
 class ClickableTrackerItem extends React.Component {
     constructor(props) {
         super(props);
+
+        var availability;
+        if (props.itemAvailability) {
+            availability = props.itemAvailability
+        } else {
+            availability = []
+        }
+
         this.state = {            
             itemIcon: props.itemIcon,
             itemName: props.itemName,
             itemClickStates: props.itemClickStates,
-            itemCurrentClickState: props.itemCurrentClickState,          
+            itemCurrentClickState: props.itemCurrentClickState, 
+            itemAvailability: availability         
         }
 
-        this.toggledClass = "item-image " + this.state.itemClickStates[this.state.itemCurrentClickState]
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -23,8 +31,8 @@ class ClickableTrackerItem extends React.Component {
 
     render() {
         return (
-            <div className="item" onClick={this.handleClick}>
-                <img className={"item-image " + this.state.itemClickStates[this.state.itemCurrentClickState]} src={this.props.itemIcon} alt={this.props.itemName} />
+            <div className="item" onClick={this.handleClick} >
+                <img className={"item-image " + this.state.itemClickStates[this.state.itemCurrentClickState] + " " + this.state.itemAvailability.join(" ")} src={this.props.itemIcon} title={this.props.itemName} alt={this.props.itemName} />
             </div>
         )
     }
