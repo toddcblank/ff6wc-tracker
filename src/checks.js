@@ -216,7 +216,7 @@ let southFigaroCave = {
     itemIcon: "./icons/tunnel-armor.gif",
     itemName: "Tunnel Armor",
     itemClickStates: ["uncollected", "collected"],
-    itemAvailability: ["wob", "wor"]
+    itemAvailability: ["both"]
 }
 
 let celes = {
