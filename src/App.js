@@ -27,6 +27,11 @@ function App() {
          />       
        </div>
       </header>
+      <footer>
+        <h3>Tracker written by Rumbleminze</h3>
+        <h3>Access the Final Fantasy VI: Worlds Collide randomizer at <a href="http://ff6wc.com">http://ff6wc.com</a></h3>
+        <h3>Join the FF6WC Discord: <a href="https://discord.gg/5MPeng5">https://discord.gg/5MPeng5</a></h3>
+      </footer>
     </div>
   );
 }
