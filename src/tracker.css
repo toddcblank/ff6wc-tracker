@@ -64,6 +64,7 @@
     border-color:silver;
     border-width: 2px;
     border-radius: 17px;
+    overflow: hidden;
 }
   .tracker-group-items {
       display: grid;
