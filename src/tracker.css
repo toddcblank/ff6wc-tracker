@@ -5,6 +5,7 @@
     font-size: 0;
     height: 48px;
     width: 32px;
+    cursor: pointer;
   }
 
 .item.incrementing {
