@@ -216,7 +216,7 @@ let southFigaroCave = {
     itemIcon: "./icons/tunnel-armor.gif",
     itemName: "Tunnel Armor",
     itemClickStates: ["uncollected", "collected"],
-    itemAvailability: ["both"]
+    itemAvailability: ["wob"]
 }
 
 let celes = {
@@ -254,7 +254,7 @@ let southFigaro = {
     itemIcon: "./icons/celes-chained.gif",
     itemName: "South Figaro",
     itemClickStates: ["uncollected", "collected"],
-    itemAvailability: ["wob"]
+    itemAvailability: ["both"]
 }
 
 let shadow = {
