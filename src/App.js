@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './tracker.css';
 import TrackerItemGrouping from './components/trackerItemGrouping'
 import trackerJson from './checks'
 import CountingTrackerItem from './components/countingTrackerItem';
-
+import CharacterCount from './components/characterCount'
 
 function App() {
+
+  const [numCharacters, setCharactersFound] = useState(0)
+
   return (
     <div className="App">
       <header className="App-header">
+        
         <h2>Final Fantasy 6: Worlds Collide Tracker</h2>
         <div className="groups">
-       {
-         trackerJson.map((group, i) => 
-          <TrackerItemGrouping 
-          groupIcon={group.groupIcon}
-          groupedItems={group.groupedItems}
-        />  
-         )
-         }
-         <CountingTrackerItem 
-          itemIcon="./icons/magicite.gif"
-          itemName="Espers Collected"
-         />       
-       </div>
+          {
+            trackerJson.map((group, i) =>
+              <TrackerItemGrouping
+                groupIcon={group.groupIcon}
+                groupedItems={group.groupedItems}
+              />
+            )
+          }
+          <CharacterCount 
+            itemIcon="./icons/magicite.gif"
+            itemName="Characters Collected"/>
+          <CountingTrackerItem
+            itemIcon="./icons/magicite.gif"
+            itemName="Espers Collected"
+          />
+        </div>
       </header>
       <footer>
         <h3>Tracker written by Rumbleminze</h3>

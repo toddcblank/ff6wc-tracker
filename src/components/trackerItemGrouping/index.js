@@ -1,36 +1,27 @@
 import React from 'react'
 import ClickableTrackerItem from '../clickableTrackerItem'
+import {useCharacterCount} from '../../hooks/characterCountHook'
 
-class TrackerItemGrouping extends React.Component {
+function TrackerItemGrouping(props) {
 
-    constructor(props) {
-        super(props);
+    const characterCount = useCharacterCount();
 
-       
-
-        this.state = {
-            groupIcon: props.groupIcon,
-            groupedItems: props.groupedItems
-        }
-    }
-
-    render() {
         return (
             <div className="tracker-group">
                 
                 <div className="group-item">
                     <div></div>
                     <ClickableTrackerItem
-                        itemIcon={this.state.groupIcon.itemIcon}
-                        itemName={this.state.groupIcon.itemName}
-                        itemClickStates={this.state.groupIcon.itemClickStates}
+                        itemIcon={props.groupIcon.itemIcon}
+                        itemName={props.groupIcon.itemName}
+                        itemClickStates={props.groupIcon.itemClickStates}
                         itemCurrentClickState={0}
-                        itemAvailability={this.state.groupIcon.itemAvailability}
+                        itemAvailability={props.groupIcon.itemAvailability}
                     />
                     <div></div>
                 </div>
                 <div className="tracker-group-items">
-                        {this.state.groupedItems.map((item, i) =>
+                        {props.groupedItems.map((item, i) =>
                             <ClickableTrackerItem
                                 key={i}
                                 itemIcon={item.itemIcon}
@@ -43,7 +34,6 @@ class TrackerItemGrouping extends React.Component {
                 </div>
             </div>
         )
-    }
 }
 
 export default TrackerItemGrouping

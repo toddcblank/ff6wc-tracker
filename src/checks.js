@@ -367,7 +367,7 @@ let umaroBoss = {
 }
 
 let open = {
-    itemIcon: "./icons/leo.gif",
+    itemIcon: "./icons/cid.gif",
     itemName: "Free",
     itemClickStates: ["collected"],
 }

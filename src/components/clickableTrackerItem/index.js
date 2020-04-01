@@ -1,41 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {useCharacterCount} from '../../hooks/characterCountHook'
+import useGlobal from '../../store'
 
-class ClickableTrackerItem extends React.Component {
-    constructor(props) {
-        super(props);
 
-        var availability;
-        if (props.itemAvailability) {
-            availability = props.itemAvailability
-        } else {
-            availability = []
-        }
+function ClickableTrackerItem(props) {
 
-        this.state = {            
-            itemIcon: props.itemIcon,
-            itemName: props.itemName,
-            itemClickStates: props.itemClickStates,
-            itemCurrentClickState: props.itemCurrentClickState, 
-            itemAvailability: availability         
-        }
+    const [stateIndex, setStateIndex] = useState(0);
+    const [globalState, globalActions] = useGlobal();
 
-        this.handleClick = this.handleClick.bind(this);
+    var itemAvailability = props.itemAvailability
+    if(props.itemAvailability == null) {
+        itemAvailability = []
     }
 
-    handleClick() {
-        let nextState = (this.state.itemCurrentClickState + 1) % this.state.itemClickStates.length
-        this.setState({
-            itemCurrentClickState: nextState
-        })
-    }
-
-    render() {
-        return (
-            <div className="item" onClick={this.handleClick} >
-                <img className={"item-image " + this.state.itemClickStates[this.state.itemCurrentClickState] + " " + this.state.itemAvailability.join(" ")} src={this.props.itemIcon} title={this.props.itemName} alt={this.props.itemName} />
-            </div>
-        )
-    }
+    return (
+        <div className="item" onClick={() => {
+            setStateIndex(((stateIndex + 1) % props.itemClickStates.length))
+            if (props.itemAvailability.indexOf("character") === -1) {
+                return
+            }
+            if (stateIndex === 0) {
+                // console.log("Count is " + count)
+                globalActions.addToCounter(1)
+            } else {
+                globalActions.addToCounter(-1)
+            }
+            }} >
+            <img className={"item-image " + props.itemClickStates[stateIndex] + " " + itemAvailability.join(" ")} src={props.itemIcon} title={props.itemName} alt={props.itemName} />
+        </div>
+    )
 }
 
 export default ClickableTrackerItem
