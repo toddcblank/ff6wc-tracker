@@ -15,11 +15,19 @@
 .item.incrementing {
   grid-template-columns: 1fr;
   height: 50px;
-  width: 94px;
+  width: 96px;
 }
 
 .incrementor div {
 
+}
+
+.available {
+  border-color: rgb(255, 255, 255)
+}
+
+.unavailable {
+  border-color: rgb(33, 33, 33)
 }
 
 .character-count {
@@ -79,7 +87,6 @@
 
   .tracker-group {
     border-style: solid;
-    border-color:silver;
     border-width: 2px;
     border-radius: 17px;
     overflow: hidden;

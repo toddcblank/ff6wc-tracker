@@ -1,23 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ClickableTrackerItem from '../clickableTrackerItem'
-import {useCharacterCount} from '../../hooks/characterCountHook'
 
 function TrackerItemGrouping(props) {
 
-    const characterCount = useCharacterCount();
+    const [availabilityState, setAvailability] = useState(props.groupIcon.itemAvailability[0] === "always")
 
         return (
-            <div className="tracker-group">
+            <div className={"tracker-group" + (availabilityState ? " available" : " unavailable")}>
                 
                 <div className="group-item">
                     <div></div>
+                    <div onClick={() => {setAvailability(props.groupIcon.itemAvailability[0] === "always" || (!availabilityState))}}>
                     <ClickableTrackerItem
                         itemIcon={props.groupIcon.itemIcon}
                         itemName={props.groupIcon.itemName}
                         itemClickStates={props.groupIcon.itemClickStates}
                         itemCurrentClickState={0}
-                        itemAvailability={props.groupIcon.itemAvailability}
+                        itemAvailability={props.groupIcon.itemAvailability}                        
                     />
+                    </div>
                     <div></div>
                 </div>
                 <div className="tracker-group-items">

@@ -370,6 +370,7 @@ let open = {
     itemIcon: "./icons/cid.gif",
     itemName: "Free",
     itemClickStates: ["collected"],
+    itemAvailability: ["always"]
 }
 let tzen = {
     itemIcon: "./icons/tzen-woods.gif",
@@ -412,6 +413,7 @@ let dragonsGroup = {
     itemIcon: "./icons/dragon.gif",
     itemName: "Dragons",
     itemClickStates: ["collected"],
+    itemAvailability: ["always"]
 }
 
 let blueDragon = {

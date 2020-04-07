@@ -20,7 +20,6 @@ function ClickableTrackerItem(props) {
                 return
             }
             if (stateIndex === 0) {
-                // console.log("Count is " + count)
                 globalActions.addToCounter(1)
             } else {
                 globalActions.addToCounter(-1)

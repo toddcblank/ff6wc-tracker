@@ -8,7 +8,7 @@ function CountingTrackerItem(props) {
         <div className="item incrementing tracker-group">
             <div className="incrementor">
                 <div  className="increment-controls" onClick={() => setCount(count - 1)}>-</div>
-                <div  className="magicite" >{count}</div>
+                <div  className="magicite" onClick={() => setCount(count + 1)}>{count}</div>
                 <div  className="increment-controls" onClick={() => setCount(count + 1)}>+</div>
             </div>
         </div>
