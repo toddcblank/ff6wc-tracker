@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import './tracker.css';
 import TrackerItemGrouping from './components/trackerItemGrouping'
@@ -8,8 +7,6 @@ import CountingTrackerItem from './components/countingTrackerItem';
 import CharacterCount from './components/characterCount'
 
 function App() {
-
-  const [numCharacters, setCharactersFound] = useState(0)
 
   return (
     <div className="App">

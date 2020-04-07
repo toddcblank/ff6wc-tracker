@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useGlobal from '../../store'
 
 function CharacterCount(props) {
 
-    const [globalState, globalActions] = useGlobal(0);
+    const [globalState] = useGlobal(0);
 
     return (
         <div className="item incrementing tracker-group">

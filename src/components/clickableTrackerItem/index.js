@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {useCharacterCount} from '../../hooks/characterCountHook'
 import useGlobal from '../../store'
 
 
