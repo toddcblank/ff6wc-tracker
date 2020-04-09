@@ -4,8 +4,14 @@
     align-self: auto;
     font-size: 0;
     height: 48px;
-    width: 32px;
     cursor: pointer;
+  }
+
+  .item-image {  
+    opacity: .25;
+    font-size: 0;
+    height: 100%;
+    width: 100%;    
   }
 
 .increment-controls {
@@ -15,7 +21,6 @@
 .item.incrementing {
   grid-template-columns: 1fr;
   height: 50px;
-  width: 96px;
 }
 
 .available {
@@ -57,13 +62,23 @@
   font-size: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 94px;
 }
 
+
 .groups {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;    
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 566px;
 }
+
+@media only screen and (max-width: 600px) {
+  .groups {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 
 
 .wob {
@@ -93,14 +108,6 @@
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr 1fr;
-  }
-    
-  .item-image {  
-    opacity: .25;
-    font-size: 0;
-    height: 100%;
-    width: 100%;    
-    min-width: 24px;
   }
 
   .collected {
