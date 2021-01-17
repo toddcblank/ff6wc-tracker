@@ -8,12 +8,19 @@ function ClickableTrackerItem(props) {
     const [globalState, globalActions] = useGlobal();
 
     var itemAvailability = props.itemAvailability
+    var isKey = false
     if(props.itemAvailability == null) {
         itemAvailability = []
     }
 
+
+    var itemClass = "item"
+    if (props.itemClickStates[0].includes("key")) {
+        itemClass = "key"
+    }
+
     return (
-        <div className="item" onClick={() => {
+        <div className={itemClass} onClick={() => {
             setStateIndex(((stateIndex + 1) % props.itemClickStates.length))
             if (props.itemAvailability.indexOf("character") === -1) {
                 return
