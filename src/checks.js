@@ -534,40 +534,55 @@ let trackerJson = [
     {
         groupIcon: morph,
         groupedItems: [
-            charge,
-            ice,
-            wave,
-            spazer,
-            plasma,
-
-            varia,
-            gravity,   
-            springball,
-            space,
-            screw,
-         
-            morph,
-            spacer,
-            ridley,
-            spacer,
-            speed,
             
-            bombs,
+            crLabel, crateriaKey1, crateriaKey2, crateriaKeyBoss,
+            morph,               
+            hijump,
+            charge,
+                    
+            brLabel, brinstarKey1, brinstarKey2, brinstarKeyBoss,             
+            unLabel, upperNorfairKey1, upperNorfairKey2, upperNorfairKeyBoss, 
+            
+            
+            bombs,            
+            speed,  
+            ice,     
+            maLabel, maridiaKey1, maridiaKey2, maridiaKeyBoss, 
+
+            
+            wsLabel, wreckedShipKey1, spacer, wreckedShipKeyBoss, 
+            varia,        
+            space,
+            wave,    
+            lnLabel, lowerNorfairKey1, spacer, lowerNorfairKeyBoss,
+            
+            spacer, spacer, 
+            ridley,   
+            gravity,  
+            springball,
+            spazer,
+            spacer, spacer,          
             kraid,
+            
             phantoon,
             draygon,
-            hijump,
- ]
-    },{
-        groupIcon: crLabel,
-        groupedItems: [
-            spacer,  crLabel, crateriaKey1, crateriaKey2, crateriaKeyBoss, 
-            spacer,  brLabel, brinstarKey1, brinstarKey2, brinstarKeyBoss, 
-            spacer,  unLabel, upperNorfairKey1, upperNorfairKey2, upperNorfairKeyBoss, 
-            spacer,  maLabel, maridiaKey1, maridiaKey2, maridiaKeyBoss, 
-            spacer,  wsLabel, wreckedShipKey1, spacer, wreckedShipKeyBoss, 
-            spacer,  lnLabel, lowerNorfairKey1, spacer, lowerNorfairKeyBoss]
+            screw,
+            plasma,
+
+            
+    ]
     }
+    
+//     ,{
+//         groupIcon: crLabel,
+//         groupedItems: [
+//             spacer,  crLabel, crateriaKey1, crateriaKey2, crateriaKeyBoss, 
+//             spacer,  brLabel, brinstarKey1, brinstarKey2, brinstarKeyBoss, 
+//             spacer,  unLabel, upperNorfairKey1, upperNorfairKey2, upperNorfairKeyBoss, 
+//             spacer,  maLabel, maridiaKey1, maridiaKey2, maridiaKeyBoss, 
+//             spacer,  wsLabel, wreckedShipKey1, spacer, wreckedShipKeyBoss, 
+//             spacer,  lnLabel, lowerNorfairKey1, spacer, lowerNorfairKeyBoss]
+//     }
 ]
 
 

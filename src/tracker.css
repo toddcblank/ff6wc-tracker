@@ -3,8 +3,9 @@
     display: inline-grid;
     align-self: auto;
     font-size: 0;
-    height: 48px;
     cursor: pointer;
+    grid-column: span 2;
+    grid-row: span 2
   }
 
   
@@ -13,9 +14,9 @@
     display: inline-grid;
     align-self: auto;
     font-size: 0;
-    height:32px;
-    width: 16px;
     cursor: pointer;
+    grid-column: span 1;
+    grid-row: span 1;
   }
 
 .item-image {  
@@ -110,7 +111,7 @@
 }
   .tracker-group-items {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
       align-items: center;
   }
 
