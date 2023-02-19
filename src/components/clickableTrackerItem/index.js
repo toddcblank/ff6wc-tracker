@@ -9,6 +9,7 @@ function ClickableTrackerItem(props) {
 
     var itemAvailability = props.itemAvailability
     var isKey = false
+    var isLevelable = false
     if(props.itemAvailability == null) {
         itemAvailability = []
     }
@@ -17,6 +18,8 @@ function ClickableTrackerItem(props) {
     var itemClass = "item"
     if (props.itemClickStates[0].includes("key")) {
         itemClass = "key"
+    } else if (props.itemClickStates[0].includes("levelable")) {
+        isLevelable = true
     }
 
     return (
@@ -31,7 +34,11 @@ function ClickableTrackerItem(props) {
                 globalActions.addToCounter(-1)
             }
             }} >
-            <img className={"item-image " + props.itemClickStates[stateIndex] + " " + itemAvailability.join(" ")} src={props.itemIcon} title={props.itemName} alt={props.itemName} />
+            <img 
+                className={"item-image " + props.itemClickStates[stateIndex] + " " + itemAvailability.join(" ")} 
+                src={Array.isArray(props.itemIcon) ? props.itemIcon[stateIndex] : props.itemIcon} 
+                title={props.itemName} 
+                alt={props.itemName} />
         </div>
     )
 }

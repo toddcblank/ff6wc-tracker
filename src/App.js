@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <h2>Super Metroid: Keysanity</h2>
+        <h2>Super Metroid: Recall</h2>
         <div className="groups">
           {
             trackerJson.map((group, i) =>

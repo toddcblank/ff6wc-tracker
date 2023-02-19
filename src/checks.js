@@ -472,25 +472,29 @@ let whiteDragon = {
     itemAvailability: ["wor"]
 }
 
-let charge = {itemIcon:"./icons/charge.png", itemName:"charge", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
+let charge = {
+    itemIcon:["./icons/charge.png","./icons/charge-lvl1.png","./icons/charge-lvl2.png","./icons/charge-lvl3.png","./icons/charge-lvl4.png"],
+    itemName:"charge", 
+    itemClickStates: ["uncollected","collected","collected","collected","collected"], 
+    itemAvailability: ["always"]}
 let ice = {itemIcon:"./icons/ice.png", itemName:"ice", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let wave = {itemIcon:"./icons/wave.png", itemName:"wave", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let spazer = {itemIcon:"./icons/spazer.png", itemName:"spazer", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let plasma = {itemIcon:"./icons/plasma.png", itemName:"plasma", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 
 let morph = {itemIcon:"./icons/morph.png", itemName:"morph", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
-let varia = {itemIcon:"./icons/varia.png", itemName:"varia", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
+let varia = {itemIcon:["./icons/varia.png","./icons/heatshield.png","./icons/varia.png"], itemName:"varia", itemClickStates: ["uncollected", "collected", "collected"], itemAvailability: ["always"]}
 let springball = {itemIcon:"./icons/springball.png", itemName:"springball", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let hijump = {itemIcon:"./icons/hijump.png", itemName:"hijump", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
-let space = {itemIcon:"./icons/space.png", itemName:"space", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
+let space = {itemIcon:["./icons/space.png","./icons/doublejump.png","./icons/space.png"], itemName:"space", itemClickStates: ["uncollected", "collected","collected"], itemAvailability: ["always"]}
 
 let bombs = {itemIcon:"./icons/bomb.png", itemName:"bombs", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
-let gravity = {itemIcon:"./icons/gravity.png", itemName:"gravity", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}    
+let gravity = {itemIcon:["./icons/gravity.png","./icons/pressurevalve.png","./icons/gravity.png"], itemName:"gravity", itemClickStates: ["uncollected", "collected", "collected"], itemAvailability: ["always"]}    
 let ridley = {itemIcon:"./icons/ridley.png", itemName:"ridley", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
-let speed = {itemIcon:"./icons/speed.png", itemName:"speed", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
+let speed = {itemIcon:"./icons/speed.png", itemName:"speed", itemClickStates: ["uncollected","collected"], itemAvailability: ["always"]}
 let screw = {itemIcon:"./icons/screw.png", itemName:"screw", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 
-// {itemIcon:"./icons/spacer.png", itemName:"spacer", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]},  
+let bigSpacer = {itemIcon:"./icons/spacer.png", itemName:"spacer", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let spacer = {itemIcon:"./icons/spacer.png", itemName:"spacer", itemClickStates:["collected key"], itemAvailability:["always"]}
 let grappling = {itemIcon:"./icons/grappling.png", itemName:"grappling", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
 let kraid = {itemIcon:"./icons/kraid.png", itemName:"kraid", itemClickStates: ["uncollected", "collected"], itemAvailability: ["always"]}
@@ -530,7 +534,7 @@ let lnLabel = {itemIcon:"./icons/ln.png", itemName:"lnLabel", itemClickStates: [
 let lowerNorfairKey1 = {itemIcon:"./icons/key1.png", itemName:"lowerNorfairKey1", itemClickStates: ["uncollected key", "collected key"], itemAvailability: ["always"]}
 let lowerNorfairKeyBoss = {itemIcon:"./icons/keyBoss.png", itemName:"lowerNorfairKeyBoss", itemClickStates: ["uncollected key", "collected key"], itemAvailability: ["always"]}
 
-let trackerJson = [
+let trackerKeySanityJson = [
     {
         groupIcon: morph,
         groupedItems: [
@@ -571,7 +575,38 @@ let trackerJson = [
 
             
     ]
-    }
+    }]
+
+let trackerJson = [
+    {
+        groupIcon: morph,
+        groupedItems: [
+            
+            charge,  
+            ice,
+            wave,
+            spazer,  
+            plasma,  
+
+            morph,
+            varia,  
+            springball,            
+            hijump,       
+            space,        
+
+            bombs,   
+            gravity,   
+            ridley,            
+            speed,  
+            screw,
+
+            grappling,    
+            kraid,
+            phantoon,
+            draygon,  
+            xray,              
+    ]
+    }]
     
 //     ,{
 //         groupIcon: crLabel,
@@ -583,7 +618,7 @@ let trackerJson = [
 //             spacer,  wsLabel, wreckedShipKey1, spacer, wreckedShipKeyBoss, 
 //             spacer,  lnLabel, lowerNorfairKey1, spacer, lowerNorfairKeyBoss]
 //     }
-]
+
 
 
 export default trackerJson

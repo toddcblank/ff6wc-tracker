@@ -78,19 +78,11 @@
 
 .groups {
   display:grid;
-  grid-template-columns: 4fr 1fr;    
+  grid-template-columns: 1fr;    
   padding-left: 20px;
   padding-right: 20px;
   max-width: 566px;
 }
-
-@media only screen and (max-width: 600px) {
-  .groups {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-
 
 .wob {
   background-color: darkblue;
@@ -130,6 +122,30 @@
     font-size: 0;
   } 
  
+  .junior-item {
+    opacity: 1;
+    filter: grayscale(.75)
+  }
+
+  .lvl-1 {
+    
+    opacity: .25;
+    background: linear-gradient(to top, #fff, #000 25%)
+  }
+
+  .lvl-2 {
+    opacity: .5;
+    background: linear-gradient(to top, #fff, #000 50%)
+  }
+
+  .lvl-3 {
+    opacity: .75;
+    background: linear-gradient(to top, #fff, #000 75%)
+  }
+
+  .lvl-4 {
+    background: linear-gradient(to top, #fff, #000 100%)
+  }
 
   .hidden {
     display: none
